@@ -1,0 +1,25 @@
+#Remove Exctra space between the char..
+import java.util.Scanner;
+
+public class rev {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        boolean flb = false;
+        String s = in.nextLine();
+        String moh = "";
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if(c != ' '){
+                moh = moh + c;
+                flb = false;
+                
+            }   
+            else if(!flb){
+                moh = moh + c;
+                flb = true;
+            }
+           
+        }
+        System.out.println(moh);
+    }
+}
