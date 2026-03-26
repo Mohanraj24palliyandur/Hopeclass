@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class dup {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        String s = in.nextLine();
+        String moh = "";
+
+        for(int i = 0; i < s.length(); i++){
+            char c = s.charAt(i);
+            boolean found = false;
+
+            for(int j = 0; j < moh.length(); j++){
+                if(c == moh.charAt(j)){
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found){
+                moh = moh + c;
+            }
+        }
+
+        System.out.println(moh);
+    }
+}
